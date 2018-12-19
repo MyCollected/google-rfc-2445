@@ -19,9 +19,10 @@ import com.google.ical.iter.RecurrenceIterator;
 import com.google.ical.iter.RecurrenceIteratorFactory;
 import com.google.ical.values.DateValue;
 import com.google.ical.values.DateValueImpl;
-import java.text.ParseException;
 import org.joda.time.DateTimeZone;
 import org.joda.time.LocalDate;
+
+import java.text.ParseException;
 
 /**
  * a factory for converting RRULEs and RDATEs into

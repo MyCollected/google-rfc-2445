@@ -14,17 +14,16 @@
 
 package com.google.ical.iter;
 
-import com.google.ical.values.RDateList;
+import com.google.ical.util.TimeUtils;
 import com.google.ical.values.DateTimeValueImpl;
 import com.google.ical.values.DateValue;
 import com.google.ical.values.DateValueImpl;
-import com.google.ical.util.TimeUtils;
+import com.google.ical.values.RDateList;
+import junit.framework.Assert;
+import junit.framework.TestCase;
 
 import java.util.Collections;
 import java.util.TimeZone;
-
-import junit.framework.Assert;
-import junit.framework.TestCase;
 
 /**
  *
@@ -97,6 +96,19 @@ public class CompoundIteratorImplTest extends TestCase {
         + "RDATE:20060422,20060417,2006\n 0412",
         new DateValueImpl(2006, 4, 13), PST, 10, null,
         "20060412,20060413,20060417,20060418,20060422,20070101");
+  }
+  public void testEveryRecurrenceFieldSetIterators() throws Exception {
+      runRecurrenceIteratorTest(
+            "RRULE:FREQ=WEEKLY;BYDAY=MO,WE,FR\r\n"
+            + "RDATE:20180804,20180812\r\n"
+            + "EXDATE:20180803,20180817\r\n"
+            + "EXRULE:FREQ=MONTHLY;BYMONTHDAY=15,17",
+            new DateValueImpl(2018, 8, 1), UTC, 10, null,
+            "20180801,20180804," +
+                    "20180806,20180808,20180810,20180812," +
+                    "20180813," +
+                    "20180820,20180822,20180824,..."
+    );
   }
 
   public void testInterleavingOfDateIterators2() throws Exception {

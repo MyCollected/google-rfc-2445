@@ -14,14 +14,15 @@
 
 package com.google.ical.iter;
 
+import com.google.ical.util.DTBuilder;
+import com.google.ical.util.TimeUtils;
 import com.google.ical.values.DateValue;
 import com.google.ical.values.IcalParseUtil;
 import com.google.ical.values.PeriodValue;
 import com.google.ical.values.RRule;
-import com.google.ical.util.DTBuilder;
-import com.google.ical.util.TimeUtils;
-import java.util.TimeZone;
 import junit.framework.TestCase;
+
+import java.util.TimeZone;
 
 /**
  * @author mikesamuel+svn@gmail.com (Mike Samuel)

@@ -16,23 +16,10 @@ package com.google.ical.iter;
 
 import com.google.ical.util.DTBuilder;
 import com.google.ical.util.TimeUtils;
-import com.google.ical.values.DateTimeValueImpl;
-import com.google.ical.values.DateValue;
-import com.google.ical.values.DateValueImpl;
-import com.google.ical.values.Frequency;
-import com.google.ical.values.RRule;
-import com.google.ical.values.TimeValue;
-import com.google.ical.values.Weekday;
-import com.google.ical.values.WeekdayNum;
-
-import java.util.Arrays;
-import java.util.List;
-import java.util.Random;
-import java.util.TimeZone;
-import java.util.Timer;
-import java.util.TimerTask;
-
+import com.google.ical.values.*;
 import junit.framework.TestCase;
+
+import java.util.*;
 
 /**
  * simulate a large number of monkeys banging on a calendar.

@@ -14,11 +14,11 @@
 
 package com.google.ical.iter;
 
-import com.google.ical.values.RDateList;
 import com.google.ical.values.DateValue;
-import java.util.TimeZone;
-
+import com.google.ical.values.RDateList;
 import junit.framework.TestCase;
+
+import java.util.TimeZone;
 
 /**
  * @author mikesamuel+svn@gmail.com (Mike Samuel)

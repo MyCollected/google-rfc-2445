@@ -17,7 +17,7 @@
   <description>An implementation of RFC2445 recurrence rules</description>
   <!--== inputs ==-->
   <property name="src" location="src"/>
-  <property name="testsrc" location="test"/>
+  <property name="testsrc" location="src/test"/>
   <property name="third_party" location="third_party"/>
   <!--== outputs ==-->
   <property name="lib" location="lib"/>

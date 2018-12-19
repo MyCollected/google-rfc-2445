@@ -14,13 +14,10 @@
 
 package com.google.ical.compat.jodatime;
 
-import java.util.Date;
-import java.util.Calendar;
-import java.util.GregorianCalendar;
-import java.util.Random;
-import java.util.TimeZone;
 import junit.framework.TestCase;
 import org.joda.time.DateTimeZone;
+
+import java.util.*;
 
 /**
  *
@@ -104,7 +101,7 @@ public class TimeZoneConverterTest extends TestCase {
     assertDST("America/Chicago", true);
     assertDST("America/Guatemala", true);
     // China should not observe DST
-    assertDST("Asia/Chongqing", false);
+    assertDST("Asia/Chongqing", false); // TODO Artёm Basov: this will fail with joda > 2.4
     assertDST("Asia/Shanghai", false);
     assertDST("Europe/Uzhgorod", true);
     assertDST("Europe/Helsinki", true);
